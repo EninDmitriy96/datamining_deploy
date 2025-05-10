@@ -151,6 +151,12 @@ def matrix_to_graph_data(matrix, threshold_percentile=90, max_links=150):
     """
     n_nodes = matrix.shape[0]
     
+    # Загрузка данных из JSON файла
+    tag2fullname_path = os.path.join(os.path.dirname(__file__), '../data/tag2fullname.json')
+    with open(tag2fullname_path, 'r') as f:
+        tag_data = json.load(f)
+    
+    # Исходный label_map с тегами
     label_map = {
         0: 'math.AC', 1: 'math.AG', 2: 'math.AP', 3: 'math.AT', 4: 'math.CA', 
         5: 'math.CO', 6: 'math.CT', 7: 'math.CV', 8: 'math.DG', 9: 'math.DS', 
@@ -161,7 +167,21 @@ def matrix_to_graph_data(matrix, threshold_percentile=90, max_links=150):
         30: 'math.SP', 31: 'math.ST'
     }
     
-    nodes = [{"id": i, "name": label_map.get(i, f"Node {i+1}")} for i in range(n_nodes)]
+    # Создаем новый словарь с полными названиями
+    label_map_fullname = {
+        idx: tag_data[tag]['full_name']
+        for idx, tag in label_map.items()
+        if tag in tag_data
+    }
+    
+    # Заполняем пропущенные значения
+    for idx in range(n_nodes):
+        if idx not in label_map_fullname:
+            label_map_fullname[idx] = f"Unknown Category {idx}"
+    
+    nodes = [{"id": i, "name": label_map_fullname.get(i, f"Node {i+1}")} for i in range(n_nodes)]
+    
+    # Остальная часть функции без изменений
     all_links = []
     for i in range(n_nodes):
         for j in range(n_nodes):

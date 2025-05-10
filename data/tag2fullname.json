@@ -1,0 +1,130 @@
+{
+    "math.AC": {
+        "full_name": "Commutative Algebra",
+        "description": "Commutative rings, modules, ideals, homological algebra, computational aspects, invariant theory, connections to algebraic geometry and combinatorics"
+    },
+    "math.AG": {
+        "full_name": "Algebraic Geometry",
+        "description": "Algebraic varieties, stacks, sheaves, schemes, moduli spaces, complex geometry, quantum cohomology"
+    },
+    "math.AP": {
+        "full_name": "Analysis of PDEs",
+        "description": "Existence and uniqueness, boundary conditions, linear and non-linear operators, stability, soliton theory, integrable PDE's, conservation laws, qualitative dynamics"
+    },
+    "math.AT": {
+        "full_name": "Algebraic Topology",
+        "description": "Homotopy theory, homological algebra, algebraic treatments of manifolds"
+    },
+    "math.CA": {
+        "full_name": "Classical Analysis and ODEs",
+        "description": "Special functions, orthogonal polynomials, harmonic analysis, ODE's, differential relations, calculus of variations, approximations, expansions, asymptotics"
+    },
+    "math.CO": {
+        "full_name": "Combinatorics",
+        "description": "Discrete mathematics, graph theory, enumeration, combinatorial optimization, Ramsey theory, combinatorial game theory"
+    },
+    "math.CT": {
+        "full_name": "Category Theory",
+        "description": "Enriched categories, topoi, abelian categories, monoidal categories, homological algebra"
+    },
+    "math.CV": {
+        "full_name": "Complex Variables",
+        "description": "Holomorphic functions, automorphic group actions and forms, pseudoconvexity, complex geometry, analytic spaces, analytic sheaves"
+    },
+    "math.DG": {
+        "full_name": "Differential Geometry",
+        "description": "Complex, contact, Riemannian, pseudo-Riemannian and Finsler geometry, relativity, gauge theory, global analysis"
+    },
+    "math.DS": {
+        "full_name": "Dynamical Systems",
+        "description": "Dynamics of differential equations and flows, mechanics, classical few-body problems, iterations, complex dynamics, delayed differential equations"
+    },
+    "math.FA": {
+        "full_name": "Functional Analysis",
+        "description": "Banach spaces, function spaces, real functions, integral transforms, theory of distributions, measure theory"
+    },
+    "math.GM": {
+        "full_name": "General Mathematics",
+        "description": "Mathematical material of general interest, topics not covered elsewhere"
+    },
+    "math.GN": {
+        "full_name": "General Topology",
+        "description": "Continuum theory, point-set topology, spaces with algebraic structure, foundations, dimension theory, local and global properties"
+    },
+    "math.GR": {
+        "full_name": "Group Theory",
+        "description": "Finite groups, topological groups, representation theory, cohomology, classification and structure"
+    },
+    "math.GT": {
+        "full_name": "Geometric Topology",
+        "description": "Manifolds, orbifolds, polyhedra, cell complexes, foliations, geometric structures"
+    },
+    "math.HO": {
+        "full_name": "History and Overview",
+        "description": "Biographies, philosophy of mathematics, mathematics education, recreational mathematics, communication of mathematics, ethics in mathematics"
+    },
+    "math.IT": {
+        "full_name": "Information Theory",
+        "description": "math.IT is an alias for cs.IT. Covers theoretical and experimental aspects of information theory and coding."
+    },
+    "math.KT": {
+        "full_name": "K-Theory and Homology",
+        "description": "Algebraic and topological K-theory, relations with topology, commutative algebra, and operator algebras"
+    },
+    "math.LO": {
+        "full_name": "Logic",
+        "description": "Logic, set theory, point-set topology, formal mathematics"
+    },
+    "math.MG": {
+        "full_name": "Metric Geometry",
+        "description": "Euclidean, hyperbolic, discrete, convex, coarse geometry, comparisons in Riemannian geometry, symmetric spaces"
+    },
+    "math.MP": {
+        "full_name": "Mathematical Physics",
+        "description": "math.MP is an alias for math-ph. Articles in this category focus on areas of research that illustrate the application of mathematics to problems in physics, develop mathematical methods for such applications, or provide mathematically rigorous formulations of existing physical theories. Submissions to math-ph should be of interest to both physically oriented mathematicians and mathematically oriented physicists; submissions which are primarily of interest to theoretical physicists or to mathematicians should probably be directed to the respective physics/math categories"
+    },
+    "math.NA": {
+        "full_name": "Numerical Analysis",
+        "description": "Numerical algorithms for problems in analysis and algebra, scientific computation"
+    },
+    "math.NT": {
+        "full_name": "Number Theory",
+        "description": "Prime numbers, diophantine equations, analytic number theory, algebraic number theory, arithmetic geometry, Galois theory"
+    },
+    "math.OA": {
+        "full_name": "Operator Algebras",
+        "description": "Algebras of operators on Hilbert space, C^*-algebras, von Neumann algebras, non-commutative geometry"
+    },
+    "math.OC": {
+        "full_name": "Optimization and Control",
+        "description": "Operations research, linear programming, control theory, systems theory, optimal control, game theory"
+    },
+    "math.PR": {
+        "full_name": "Probability",
+        "description": "Theory and applications of probability and stochastic processes: e.g. central limit theorems, large deviations, stochastic differential equations, models from statistical mechanics, queuing theory"
+    },
+    "math.QA": {
+        "full_name": "Quantum Algebra",
+        "description": "Quantum groups, skein theories, operadic and diagrammatic algebra, quantum field theory"
+    },
+    "math.RA": {
+        "full_name": "Rings and Algebras",
+        "description": "Non-commutative rings and algebras, non-associative algebras, universal algebra and lattice theory, linear algebra, semigroups"
+    },
+    "math.RT": {
+        "full_name": "Representation Theory",
+        "description": "Linear representations of algebras and groups, Lie theory, associative algebras, multilinear algebra"
+    },
+    "math.SG": {
+        "full_name": "Symplectic Geometry",
+        "description": "Hamiltonian systems, symplectic flows, classical integrable systems"
+    },
+    "math.SP": {
+        "full_name": "Spectral Theory",
+        "description": "Schrodinger operators, operators on manifolds, general differential operators, numerical studies, integral operators, discrete models, resonances, non-self-adjoint operators, random operators/matrices"
+    },
+    "math.ST": {
+        "full_name": "Statistics Theory",
+        "description": "Applied, computational and theoretical statistics: e.g. statistical inference, regression, time series, multivariate analysis, data analysis, Markov chain Monte Carlo, design of experiments, case studies"
+    }
+}
