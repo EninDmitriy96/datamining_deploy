@@ -1,23 +1,52 @@
 function drawGraph(data, container) {
-    // Очищаем контейнер
     container.innerHTML = '';
     
     const width = container.clientWidth || 800;
     const height = 600;
+    const margin = 50; // Отступ от границ
     
-    // Создаем SVG
     const svg = d3.create("svg")
         .attr("width", width)
         .attr("height", height)
         .attr("viewBox", [0, 0, width, height])
         .attr("style", "max-width: 100%; height: auto;");
-    
-    // Создаем симуляцию
+
+    // Конфигурация сил
     const simulation = d3.forceSimulation(data.nodes)
-        .force("link", d3.forceLink(data.links).id(d => d.id).distance(100))
-        .force("charge", d3.forceManyBody().strength(-300))
-        .force("center", d3.forceCenter(width / 2, height / 2))
-        .force("collision", d3.forceCollide().radius(30));
+        .force("link", d3.forceLink(data.links)
+            .id(d => d.id)
+            .distance(150)
+            .strength(0.05))
+        .force("charge", d3.forceManyBody()
+            .strength(-150))
+        .force("center", d3.forceCenter(width/2, height/2)
+            .strength(0.1))
+        .force("collision", d3.forceCollide()
+            .radius(40))
+        .force("bounds", () => { // Новая сила для границ
+            data.nodes.forEach(node => {
+                const pushStrength = 0.1;
+                
+                // Отталкивание от левой границы
+                if(node.x < margin) {
+                    node.vx += (margin - node.x) * pushStrength;
+                }
+                // Отталкивание от правой границы
+                if(node.x > width - margin) {
+                    node.vx += (width - margin - node.x) * pushStrength;
+                }
+                // Отталкивание от верхней границы
+                if(node.y < margin) {
+                    node.vy += (margin - node.y) * pushStrength;
+                }
+                // Отталкивание от нижней границы
+                if(node.y > height - margin) {
+                    node.vy += (height - margin - node.y) * pushStrength;
+                }
+            });
+        })
+        .alphaDecay(0.02)
+        .velocityDecay(0.4);
     
     // Определяем цветовую шкалу для ребер
     const weightExtent = d3.extent(data.links, d => d.weight);
