@@ -109,7 +109,7 @@ def load_model_and_predict_for_date(target_date):
             print(f"Прогнозируем для даты: {next_date}")
             
             next_matrix = model.predict_next_month()
-            
+        
             # Проверяем разницу между матрицами
             diff = matrix_difference(prev_matrix, next_matrix)
             print(f"Разница между матрицами {current_date} и {next_date}: {diff:.6f}")
@@ -137,14 +137,12 @@ def load_model_and_predict_for_date(target_date):
     print(f"Статистика матрицы для {target_date}:")
     print(f"  Min: {np.min(matrix):.6f}, Max: {np.max(matrix):.6f}, Mean: {np.mean(matrix):.6f}")
     print(f"  Ненулевых элементов: {np.sum(matrix > 0.05)}")
-    
     # Преобразуем матрицу в данные для графа
     graph_data = matrix_to_graph_data(matrix)
     print(f"Создан граф с {len(graph_data['nodes'])} узлами и {len(graph_data['links'])} связями")
-    
     return matrix, graph_data
 
-def matrix_to_graph_data(matrix, threshold_percentile=90, max_links=150):
+def matrix_to_graph_data(matrix, threshold_percentile=95, max_links=150):
     """
     Преобразует матрицу смежности в формат для визуализации графа,
     отображая только самые сильные связи
