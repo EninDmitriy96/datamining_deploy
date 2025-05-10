@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Prediction App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Graph Prediction Visualization</h1>
+        
+        <div class="controls">
+            <label for="date-input">Choose the date (YYYY-MM):</label>
+            <input type="month" id="date-input" value="2023-05">
+            <button id="predict-btn">Display graph</button>
+        </div>
+        
+        <div class="status">
+            <div id="loading" class="loading hidden">Loading...</div>
+            <div id="error" class="error hidden"></div>
+        </div>
+        
+        <div class="result-container">
+            <h2>Graph for <span id="result-date">-</span></h2>
+            <div id="graph-container"></div>
+        </div>
+    </div>
+    
+    <script src="js/graph.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
